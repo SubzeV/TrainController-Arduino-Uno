@@ -11,6 +11,8 @@ What you need to get started:
 
 If you have questions or need help, please do not use the bugtracker for that. I will be setting up the wiki and a discord server if there is demand for it (For now you can use the bugtracker if you really need to, but classify it as a question please).
 
+I am by no means the most professional or efficient coder, I know that! But any feedback or code suggestions on how to do things more efficiently is always welcome!
+
 I will be sharing more details in the future and hopefully I don't forget to update this readme.
 
 ~ sincerely, scatterbrained Subzero Hiro.
