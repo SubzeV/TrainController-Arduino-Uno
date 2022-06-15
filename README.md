@@ -6,6 +6,8 @@ What you need to get started:
 - Arduino IDE (https://www.arduino.cc/en/software)
 - Processing 4.0+ (version 4.0b8 used for developing: https://processing.org/download)
 - Potentiometers & buttons (the amount of each depends on what kind of setup you will use)
+- Wires
+- Breadboard(s) for testing
 - Some coding knowledge
 - And lastly, some patience for setting this up. (Trust me, it is worth it if you enjoy train sim which you probably do considering you are here 😆)
 
