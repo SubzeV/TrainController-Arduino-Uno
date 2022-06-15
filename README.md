@@ -13,6 +13,8 @@ If you have questions or need help, please do not use the bugtracker for that. I
 
 I am by no means the most professional or efficient coder, I know that! But any feedback or code suggestions on how to do things more efficiently is always welcome!
 
+You can go to the wiki for a quick and simple how to (https://github.com/Subzero-Hiro/TrainController-Arduino-Uno/wiki)
+
 I will be sharing more details in the future and hopefully I don't forget to update this readme.
 
 ~ sincerely, scatterbrained Subzero Hiro.
