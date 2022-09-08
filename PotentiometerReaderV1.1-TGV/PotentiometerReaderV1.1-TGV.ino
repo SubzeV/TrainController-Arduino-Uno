@@ -13,11 +13,11 @@ int prevClickedPercent1 = 0;
 int pot2Pin = A1; // potentiometer is connected to analog 0 pin
 int pot2Value; // variable used to store the value coming from the sensor
 int percent2; // variable used to store the percentage value
-int clickedPercent2;
+int clickedPercent2; \
 int prevClickedPercent2 = 0;
 
-int prevPot1Val = 0;
-int prevPot2Val = 0;
+int prevPot1Val = 0; // potentiometer 1's previous value to detect movement
+int prevPot2Val = 0; // potentiometer 2's previous value to detect movement
 
 int throttleClicks = 17; // define the amount of position a train's throttle or combined throttle/brake lever has
 // The TGV Euroduplex for example needs 17 (8 in each direction for throttle + 0 throttle)
@@ -55,10 +55,6 @@ if (clickedPercent1 < prevClickedPercent1) {
   prevClickedPercent1 = clickedPercent1;
   delay(1);
 }
-
-//    Serial.println("Back1:"); // ignore, temporary code
-//    Serial.println("Forward1:"); // ignore, temporary code
-
 
 // ---Pot 2---
 pot2Value = analogRead(pot2Pin); // get a reading from the potentiometer, assign the name potValue
