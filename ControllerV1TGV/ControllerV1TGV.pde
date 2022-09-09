@@ -10,9 +10,9 @@ void setup()
 {
   System.out.println("Hi");
   
-  try // wait for 5 seconds before starting to register input.
+  try // wait for 1 second before starting to register input.
   {
-    Thread.sleep(5000);
+    Thread.sleep(1000);
   }
   catch(InterruptedException ex)
   {
@@ -21,7 +21,7 @@ void setup()
   System.out.println("Outputting now!");
   
   size(700, 500);
-  MyPort = new Serial(this, "COM3", 9600); // Arduino is on COM3. Enter the COM on which your Arduino is on.
+  MyPort = new Serial(this, "COM5", 9600); // Arduino is on COM3. Enter the COM on which your Arduino is on.
   MyPort.bufferUntil('\n');
   
 
@@ -66,7 +66,7 @@ void serialEvent(Serial MyPort)throws Exception {
        Arduino.keyPress(KeyEvent.VK_QUOTE); // presses quote key.
          try
          {
-           Thread.sleep(100); // wait set amount of time (ms)
+           Thread.sleep(120); // wait set amount of time (ms)
          }
          catch(InterruptedException ex)
          {
@@ -78,7 +78,7 @@ void serialEvent(Serial MyPort)throws Exception {
        Arduino.keyPress(KeyEvent.VK_SEMICOLON); // presses semicolon key.
          try
          {
-           Thread.sleep(100); // wait set amount of time (ms)
+           Thread.sleep(120); // wait set amount of time (ms)
          }
          catch(InterruptedException ex)
          {

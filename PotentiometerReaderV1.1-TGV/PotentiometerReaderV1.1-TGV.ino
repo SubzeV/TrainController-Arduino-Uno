@@ -80,5 +80,5 @@ if (clickedPercent2 < prevClickedPercent2) {
   prevClickedPercent2 = clickedPercent2;
   delay(1);
 }
-delay(8);
+// delay(8);
 }
