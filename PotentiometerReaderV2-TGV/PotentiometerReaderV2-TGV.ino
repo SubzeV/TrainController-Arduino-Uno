@@ -26,9 +26,10 @@ int brakeClicks = 3; // a bit more complex but similar to the 'throttleClicks'.
 
 void setup() {
   Serial.begin(9600); // initialize the serial communication
-  for (int i = 0; i <= 20; i++) {
+  for (int i = 0; i <= 5; i++) {
     Serial.println("Back1:");
     Serial.println("Back2:");
+    delay(20);
   }
   clickedPercent1 = float(pot1Value) / float(100 / float(throttleClicks));
   clickedPercent2 = float(pot2Value) / float(100 / float(brakeClicks));
@@ -39,7 +40,7 @@ void loop() {
   // ---Potentiometer 1---
   pot1Value = analogRead(pot1Pin) / 10.1;
   pot2Value = analogRead(pot2Pin) / 10.2;
-  Serial.println(pot1Value);
+  // Serial.println(pot1Value);
   //  Serial.println(pot2Value);
   // clickedPercent1 = 100 / throttleClicks;
   // Serial.println(clickedPercent1);
@@ -59,26 +60,28 @@ void loop() {
   
   
   prevClickedPercent1 = clickedPercent1;
-  Serial.print("Previous 1:");
-  Serial.println(prevClickedPercent1); 
-  delay(200);
+  // Serial.print("Previous 1:");
+  // Serial.println(prevClickedPercent1); 
+  // delay(200);
   clickedPercent1 = float(pot1Value) / float(100 / float(throttleClicks));
-  Serial.print("New 1:");
-  Serial.println(clickedPercent1); 
+  // Serial.print("New 1:");
+  // Serial.println(clickedPercent1); 
 
   if(float(clickedPercent1) - float(prevClickedPercent1) > 0){
     for(int i = clickedPercent1 - prevClickedPercent1; i >= 0; i = i-1){
       //Serial.println(i);
       Serial.println("Back1:");
+      delay(150);
     }
   }
   if(clickedPercent1 - prevClickedPercent1 < 0){
     for(int i = clickedPercent1 - prevClickedPercent1; i <= 0; i = i+1){
       //Serial.println(i);
       Serial.println("Forward1:");
+      delay(150);
     }
   }
-  delay(200);
+  //delay(250);
 
   // Serial.println("Forward1:");
   // Serial.println("Back1:");
