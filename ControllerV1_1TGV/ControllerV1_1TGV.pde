@@ -10,27 +10,21 @@ void setup()
 {
   System.out.println("Hi");
   
-  try // wait for 1 second before starting to register input.
-  {
-    Thread.sleep(1000);
-  }
-  catch(InterruptedException ex)
-  {
-    Thread.currentThread().interrupt();
-  }
+  // wait for 1 second before starting to register input.
+  delay(1000);
   System.out.println("Outputting now!");
   
   size(700, 500);
-  MyPort = new Serial(this, "COM5", 9600); // Arduino is on COM3. Enter the COM on which your Arduino is on.
+  MyPort = new Serial(this, "COM5", 9600); // Arduino is usually on COM3 or 5. Enter the COM on which your Arduino is on.
   MyPort.bufferUntil('\n');
   
 
   
 }
-void draw(){//Not really necessary
+void draw(){//Not really necessary but nice to have visual
   background(0, 0, 0);
   fill(255, 0, 0);
-  text("Start using the controller...", 10, 10);
+  text("Start using the controller...", 30, 30);
 }
 void serialEvent(Serial MyPort)throws Exception {
    KeyString = MyPort.readStringUntil('\n');
@@ -40,52 +34,25 @@ void serialEvent(Serial MyPort)throws Exception {
    switch(KeyString){
      case "Forward1" :
        Arduino.keyPress(KeyEvent.VK_D); // presses D key.
-         try
-         {
-           Thread.sleep(90); // wait set amount of time (ms)
-         }
-         catch(InterruptedException ex)
-         {
-           Thread.currentThread().interrupt();
-         }
+         delay(83);
        Arduino.keyRelease(KeyEvent.VK_D); // releases D key
        break;
      case "Back1" :
        Arduino.keyPress(KeyEvent.VK_A); // presses A key
-         try
-         {
-           Thread.sleep(90); // wait set amount of time (ms)
-         }
-         catch(InterruptedException ex)
-         {
-           Thread.currentThread().interrupt();
-         }
+         delay(83);
        Arduino.keyRelease(KeyEvent.VK_A); // releases A key
        break;
      case "Forward2" :
        Arduino.keyPress(KeyEvent.VK_QUOTE); // presses quote key.
-         try
-         {
-           Thread.sleep(120); // wait set amount of time (ms)
-         }
-         catch(InterruptedException ex)
-         {
-           Thread.currentThread().interrupt();
-         }
+         delay(100);
        Arduino.keyRelease(KeyEvent.VK_QUOTE); // releases quote key
        break;
      case "Back2" :
        Arduino.keyPress(KeyEvent.VK_SEMICOLON); // presses semicolon key.
-         try
-         {
-           Thread.sleep(120); // wait set amount of time (ms)
-         }
-         catch(InterruptedException ex)
-         {
-           Thread.currentThread().interrupt();
-         }
+         delay(100);
        Arduino.keyRelease(KeyEvent.VK_SEMICOLON); // releases semicolon key
        break;
    }
    
 }
+//
