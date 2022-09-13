@@ -40,24 +40,6 @@ void loop() {
   // ---Potentiometer 1---
   pot1Value = analogRead(pot1Pin) / 10.1;
   pot2Value = analogRead(pot2Pin) / 10.2;
-  // Serial.println(pot1Value);
-  //  Serial.println(pot2Value);
-  // clickedPercent1 = 100 / throttleClicks;
-  // Serial.println(clickedPercent1);
-
-//  for(int i = 0; i <= throttleClicks; i++){
-//
-//    Serial.print("Checking for click: ");
-//    Serial.println(i);
-//    clickedPercent1 = float(pot1Value) / float(100 / float(throttleClicks));
-//    Serial.print("Current pot click: ");
-//    Serial.println(clickedPercent1);
-//    if(i == clickedPercent1){
-//       Serial.print(i);
-//    }
-//    delay(200);
-//  }
-  
   
   prevClickedPercent1 = clickedPercent1;
   // Serial.print("Previous 1:");
@@ -81,13 +63,4 @@ void loop() {
       delay(150);
     }
   }
-  //delay(250);
-
-  // Serial.println("Forward1:");
-  // Serial.println("Back1:");
-
-  // ---Potentiometer 2---
-
-  // Serial.println("Forward2:");
-  // Serial.println("Back2:");
 }
