@@ -20,6 +20,6 @@ You can go to the wiki for a quick and simple how to (https://github.com/Subzero
 ## Please note:
 
 From now on I will be moving on to using arduino leonardo to keep all the code contained in a single program and make it work more consistently. I might still update this repo every now and then but don't expect much.
-I will post the new repo once it is ready right here: -soon-
+I will post the new repo once it is ready right here: https://github.com/Subzero-Hiro/Arduino-Train-Controller
 
 ~ sincerely, scatterbrained Subzero Hiro.
